@@ -1,12 +1,11 @@
-package cn.kerry.sharestudio.base;
+package cn.kerry.sharestudio.global;
+
 
 import android.app.Activity;
 import android.app.Application;
 
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.xml.validation.Schema;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -22,6 +21,10 @@ public class MyApplication extends Application {
     private static MyApplication instance;
     private Set<Activity> allActivities;
 
+
+    public static synchronized MyApplication getInstance() {
+        return instance;
+    }
 
     @Override
     public void onCreate() {
