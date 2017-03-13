@@ -3,6 +3,7 @@ package cn.kerry.sharestudio.global;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 
 import java.util.HashSet;
 import java.util.Set;
